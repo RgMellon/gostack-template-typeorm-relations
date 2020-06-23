@@ -1,7 +1,7 @@
 ## Permitir criação de clientes
 
 <table>
- <tr>  costumer  </tr>
+ <tr>  customers  </tr>
   <tr>
     <td> id  </td>
     <td> name</td>
@@ -24,6 +24,10 @@
 - Espero que, se exister um email ja cadastrado com o mesmo que estou enviando, retorne um erro;
 
 ## Permitir criação de produtos
+
+<!--
+@Column("decimal", { precision: 5, scale: 2 })
+value: number; -->
 
 **RF**
 
@@ -79,3 +83,9 @@
     <td> updated_at </td>
   </tr>
 </table>
+
+## TO DO
+
+[ x ] criar migrations
+[ ] Criar as entides e relacionar
+[ ] Salvar o usuário
