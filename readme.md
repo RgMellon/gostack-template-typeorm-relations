@@ -87,5 +87,5 @@ value: number; -->
 ## TO DO
 
 [ x ] criar migrations
-[ ] Criar as entides e relacionar
+[ x ] Criar as entidades e relacionar
 [ ] Salvar o usuário
