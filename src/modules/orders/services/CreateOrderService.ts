@@ -62,7 +62,7 @@ class CreateOrderService {
       if (findProductById) {
         updatedProducts.push({
           id: findProduct.id,
-          quantity: findProduct.quantity - findProductById.quantity,
+          quantity: findProductById.quantity,
         });
       }
 
@@ -73,15 +73,12 @@ class CreateOrderService {
       };
     });
 
-    await this.productsRepository.updateQuantity(updatedProducts);
-
     const createOrder = await this.ordersRepository.create({
       customer,
       products: parsedProducts,
     });
 
-    // const u = await this.productsRepository.findAllById(productIds);
-    // console.log(u);
+    await this.productsRepository.updateQuantity(updatedProducts);
 
     return createOrder;
   }
